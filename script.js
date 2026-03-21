@@ -137,6 +137,14 @@ async function quicHmac(key, buffer) {
     const cryptoKey = (key instanceof CryptoKey) ? key : await c.importKey('raw', key, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
     return c.sign('HMAC', cryptoKey, buffer);
 }
+
+async function quicInitHmacKey() {
+    const quicSalt = new Uint8Array([
+        0x38, 0x76, 0x2c, 0xf7, 0xf5, 0x59, 0x34, 0xb3, 0x4d, 0x17,
+        0x9a, 0xe6, 0xa4, 0xc8, 0x0c, 0xad, 0xcc, 0xbb, 0x7f, 0x0a,
+    ]);
+    quicHmacKey = await c.importKey('raw', quicSalt, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+}
 /**
  * @param {CryptoKey|ArrayBuffer} key
  * @param {number} length
@@ -236,6 +244,7 @@ async function quicInitial(dcid, scid, token, pkn, payload, padto) {
         pkn,
     ]);
     // Derive keys
+    if (!quicHmacKey) await quicInitHmacKey();
     const initSecret = await quicHmac(quicHmacKey, dcid);
     const clientSecret = await quicDeriveSecret(initSecret, 32, 'client in');
     const quicKey = await quicDeriveSecret(clientSecret, 16, 'quic key');
@@ -324,16 +333,7 @@ function zebra(buffer, parts, includeFirst = true) {
     return result;
 }
 
-async function init() {
-    const quicSalt = new Uint8Array([
-        0x38, 0x76, 0x2c, 0xf7, 0xf5, 0x59, 0x34, 0xb3, 0x4d, 0x17,
-        0x9a, 0xe6, 0xa4, 0xc8, 0x0c, 0xad, 0xcc, 0xbb, 0x7f, 0x0a,
-    ]);
-    quicHmacKey = await c.importKey('raw', quicSalt, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
-}
-
 async function generate() {
-    if (!quicHmacKey) await init();
     const sniInput = document.getElementById('sni');
     const sni = sniInput.value || sniInput.placeholder;
     const dcid = new Uint8Array(1);
