@@ -1,24 +1,86 @@
-This is free and unencumbered software released into the public domain.
+================================================================================
+ENGLISH VERSION (MIT LICENSE & SPECIAL COMPLIANCE AMENDMENT)
+================================================================================
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+Copyright (c) 2026 Sage Pointer
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-For more information, please refer to <https://unlicense.org>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+ADDITIONAL RESEARCH & COMPLIANCE CLAUSES:
+--------------------------------------------------------------------------------
+1. INTENDED USE AND RESTRICTIONS:
+The Software is a research and demonstration tool of the Proof of Concept (PoC) 
+class, developed solely for academic research, validation of network stack 
+conformance to the RFC 9000 (QUIC) standard, and security auditing. Use of this 
+Software is permitted EXCLUSIVELY on isolated test benches, within IT infrastructure 
+owned by the user, or with the express prior written consent of the target system owner.
+
+2. LEGAL STATUS:
+This Software is a testing tool and does not contain functionalities for unauthorized 
+access, destruction, blocking, or modification of computer information. The Software 
+generates minimal-length test UDP datagrams to verify the resilience of state machines 
+against atypical data structures. It is not designed or intended to cause system 
+failures, disruptions, or denial of service.
+
+3. USER RESPONSIBILITY:
+The end-user assumes all risk and full legal responsibility for compliance with 
+applicable local and international laws (including cybercrime and critical 
+infrastructure protection acts) when running this Software. Deployment or utilization 
+of this Software constitutes the user's unconditional acceptance of this agreement.
+
+================================================================================
+РУССКАЯ ВЕРСИЯ (ЛИЦЕНЗИЯ MIT И СПЕЦИАЛЬНОЕ СОГЛАШЕНИЕ)
+================================================================================
+
+Данное программное обеспечение (далее — ПО) распространяется на условиях 
+международной лицензии MIT. Вы имеете право свободно копировать, изменять 
+и распространять данный код, при условии сохранения уведомления об авторских правах.
+
+ПО ПРЕДОСТАВЛЯЕТСЯ НА УСЛОВИЯХ «КАК ЕСТЬ» (AS IS), БЕЗ КАКИХ-ЛИБО ЯВНЫХ ИЛИ 
+ПОДРАЗУМЕВАЕМЫХ ГАРАНТИЙ. РАЗРАБОТЧИК (АВТОР) НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ НЕ НЕСЕТ 
+ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ, СБОИ В РАБОТЕ ОБОРУДОВАНИЯ 
+ИЛИ НАРУШЕНИЕ ФУНКЦИОНИРОВАНИЯ СЕТЕЙ СВЯЗИ, ВОЗНИКШИЕ В РЕЗУЛЬТАТЕ ИСПОЛЬЗОВАНИЯ 
+ДАННОГО ПО ТРЕТЬИМИ ЛИЦАМИ.
+
+--------------------------------------------------------------------------------
+ДОПОЛНИТЕЛЬНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ И ПРАВОВЫЕ ПОЛОЖЕНИЯ:
+--------------------------------------------------------------------------------
+1. ФУНКЦИОНАЛЬНОЕ НАЗНАЧЕНИЕ И ОГРАНИЧЕНИЯ:
+ПО является исследовательским демонстрационным стендом класса Proof of Concept (PoC). 
+Оно разработано исключительно в целях академического анализа, валидации корректности 
+реализации сетевого стека по стандарту RFC 9000 (QUIC) и аудита безопасности. 
+Использование ПО разрешено ИСКЛЮЧИТЕЛЬНО на изолированных лабораторных стендах, 
+в ИТ-инфраструктуре пользователя, либо при наличии явного письменного согласия 
+владельца целевых систем.
+
+2. ПРАВОВОЙ СТАТУС ПО:
+Данное ПО является инструментом для тестирования и не содержит функций 
+несанкционированного доступа, уничтожения, блокирования или модификации 
+компьютерной информации (в терминах ст. 272, 273, 274.1 УК РФ). ПО осуществляет 
+генерацию тестовых UDP-датаграмм минимальной длины для проверки устойчивости 
+алгоритмов разбора состояний (State Machine) к нетипичным структурам данных. 
+ПО не предназначено для вывода систем из строя или нарушения их работоспособности.
+
+3. ОТВЕТСТВЕННОСТЬ ПОЛЬЗОВАТЕЛЯ:
+Вся ответственность за соблюдение применимого законодательства (включая уголовное, 
+гражданское и законодательство о критической информационной инфраструктуре) при 
+запуске ПО целиком и полностью возлагается на конечного пользователя. Использование 
+ПО означает безоговорочное согласие пользователя с условиями данного соглашения.
+================================================================================
